@@ -1,59 +1,3 @@
-// import Link from "next/link";
-
-// export default function Header() {
-//   return (
-//     <div className="flex justify-between px-28 py-5">
-//       <Link href="/" className="text-black">
-//         Logo
-//       </Link>
-//       <nav>
-//         <ul className="flex gap-y-4 gap-x-5">
-//           <li>
-//             <Link
-//               href="/about"
-//               className=" text-blue-700 text-[1rem] font-medium"
-//             >
-//               Home
-//             </Link>
-//           </li>
-//           <li>
-//             <Link
-//               href="/contact"
-//               className=" text-blue-700 text-[1rem] font-medium"
-//             >
-//               Gallery
-//             </Link>
-//           </li>
-//           <li>
-//             <Link
-//               href="/contact"
-//               className=" text-blue-700 text-[1rem] font-medium"
-//             >
-//               About Us
-//             </Link>
-//           </li>
-//           <li>
-//             <Link
-//               href="/about"
-//               className=" text-blue-700 text-[1rem] font-medium"
-//             >
-//               Volunteer
-//             </Link>
-//           </li>
-//           <li>
-//             <Link
-//               href="/contact"
-//               className=" text-blue-700 text-[1rem] font-medium"
-//             >
-//               Contact
-//             </Link>
-//           </li>
-//         </ul>
-//       </nav>
-//     </div>
-//   );
-// }
-
 "use client";
 
 import { useState } from "react";
@@ -76,7 +20,7 @@ export default function Header() {
           <ul className="flex gap-x-6">
             {[
               ["Home", "/"],
-              ["Gallery", "/gallery"],
+              ["Projects", "/projects"],
               ["About Us", "/about"],
               ["Volunteer", "/volunteer"],
               ["Contact", "/contact"],
@@ -138,7 +82,7 @@ export default function Header() {
             <ul className="flex flex-col gap-6">
               {[
                 ["Home", "/"],
-                ["Gallery", "/gallery"],
+                ["Projects", "/projects"],
                 ["About Us", "/about"],
                 ["Volunteer", "/volunteer"],
                 ["Contact", "/contact"],

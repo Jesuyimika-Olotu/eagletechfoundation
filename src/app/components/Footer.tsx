@@ -12,46 +12,49 @@ export default function Footer() {
           backgroundPosition: "center",
         }}
       >
-        <div className="bg-black/50 w-full h-full absolute inset-0 rounded-2xl"></div>
+        <div className="bg-[#020A18]/50 w-full h-full absolute inset-0 rounded-2xl"></div>
         <div className="relative z-10 flex flex-col justify-center items-center text-center space-y-6 max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
             You can contribute to provide a place for children with special
             needs
           </h2>
-          <button className="bg-blue-700 text-white px-6 py-3 font-bold rounded-lg shadow hover:bg-blue-600 transition-all duration-300">
+          <button className="bg-[#3322AA] text-white px-6 py-3 font-bold rounded-lg shadow hover:bg-[#3133EE] transition-all duration-300">
             Join as a Volunteer
           </button>
         </div>
       </section>
-      <footer className="bg-[#0F1F4C] text-white py-16 px-6 md:px-28 mt-28">
+
+      <footer className="bg-[#10103C] text-white py-16 px-6 md:px-28 mt-28">
         <div className="flex flex-col md:flex-row md:justify-between gap-12 md:gap-0">
           {/* Logo & Description */}
           <div className="flex-1 space-y-4">
-            <div className="text-2xl font-bold">Eagletech Foundation</div>
-            <p className="text-gray-300">
+            <div className="text-2xl font-bold text-white">
+              Eagletech Foundation
+            </div>
+            <p className="text-white">
               Empowering communities through technology and innovation.
             </p>
           </div>
 
           {/* Navigation Links */}
           <div className="flex-1 space-y-4">
-            <h3 className="text-lg font-semibold mb-2 md:hidden">
+            <h3 className="text-lg font-semibold mb-2 md:hidden text-white">
               Quick Links
             </h3>
-            <nav className="flex flex-col gap-2 text-gray-200">
-              <Link href="#home" className="hover:text-white transition">
+            <nav className="flex flex-col gap-2 text-white">
+              <Link href="#home" className="">
                 Home
               </Link>
-              <Link href="#gallery" className="hover:text-white transition">
+              <Link href="#gallery" className="">
                 Gallery
               </Link>
-              <Link href="#about" className="hover:text-white transition">
+              <Link href="#about" className="">
                 About Us
               </Link>
-              <Link href="#volunteer" className="hover:text-white transition">
+              <Link href="#volunteer" className="">
                 Volunteer
               </Link>
-              <Link href="#contact" className="hover:text-white transition">
+              <Link href="#contact" className="">
                 Contact
               </Link>
             </nav>
@@ -59,8 +62,10 @@ export default function Footer() {
 
           {/* Contact & Social */}
           <div className="flex-1 space-y-4">
-            <h3 className="text-lg font-semibold mb-2">Connect With Us</h3>
-            <div className="flex flex-col gap-2 text-gray-200">
+            <h3 className="text-lg font-semibold mb-2 text-white">
+              Connect With Us
+            </h3>
+            <div className="flex flex-col gap-2 text-white">
               <div>
                 <span className="font-medium">Phone: </span>
                 <a
@@ -72,34 +77,30 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-medium">Email: </span>
-                <a
-                  href="mailto:info@eagletech.org"
-                  className="hover:text-white transition"
-                >
+                <a href="mailto:info@eagletech.org" className="text-white">
                   info@eagletech.org
                 </a>
               </div>
             </div>
 
             <div className="flex flex-wrap gap-4 mt-4">
-              <a href="#" className="text-gray-200 hover:text-white transition">
-                Facebook
-              </a>
-              <a href="#" className="text-gray-200 hover:text-white transition">
-                Twitter
-              </a>
-              <a href="#" className="text-gray-200 hover:text-white transition">
-                LinkedIn
-              </a>
-              <a href="#" className="text-gray-200 hover:text-white transition">
-                Instagram
-              </a>
+              {["Facebook", "Twitter", "LinkedIn", "Instagram"].map(
+                (social) => (
+                  <a
+                    key={social}
+                    href="#"
+                    className="text-white hover:text-white transition"
+                  >
+                    {social}
+                  </a>
+                )
+              )}
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 border-t border-white pt-6 text-center text-gray-400 text-sm">
+        <div className="mt-12 border-t border-[#3322AA]/50 pt-6 text-center text-white text-sm">
           &copy; 2025 Eagletech Foundation. All rights reserved.
         </div>
       </footer>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,10 +10,16 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header className="flex justify-between items-center px-6 md:px-16 lg:px-28 py-5 bg-white shadow-sm">
+      <header className="flex items-center justify-between px-6 md:px-16 lg:px-28 py-4 bg-[#F8F6FE] sticky top-0 z-30 shadow-md">
         {/* Logo */}
-        <Link href="/" className="text-black font-bold text-xl">
-          Logo
+        <Link href="/" className="font-bold text-xl">
+          <Image
+            src="/icons/updated-logo2.svg"
+            width={200}
+            height={200}
+            alt="Logo"
+            className="h-10 md:h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -28,7 +35,7 @@ export default function Header() {
               <li key={label}>
                 <Link
                   href={href}
-                  className="text-blue-700 text-[1rem] font-medium hover:underline"
+                  className="text-[#3322AA] text-[1rem] font-medium hover:text-[#3133EE] hover:underline"
                 >
                   {label}
                 </Link>
@@ -39,7 +46,7 @@ export default function Header() {
 
         {/* Hamburger (Mobile) */}
         <button
-          className="md:hidden text-blue-700 text-2xl"
+          className="md:hidden text-[#3322AA] text-2xl"
           onClick={() => setMenuOpen(true)}
           aria-label="Open menu"
         >
@@ -55,7 +62,7 @@ export default function Header() {
       >
         {/* Overlay */}
         <div
-          className={`absolute inset-0 bg-black/40 transition-opacity ${
+          className={`absolute inset-0 bg-[#020A18]/40 transition-opacity ${
             menuOpen ? "opacity-100" : "opacity-0"
           }`}
           onClick={() => setMenuOpen(false)}
@@ -63,15 +70,15 @@ export default function Header() {
 
         {/* Sidebar */}
         <aside
-          className={`absolute left-0 top-0 h-full w-72 bg-white px-6 py-8 transform transition-transform ${
+          className={`absolute left-0 top-0 h-full w-72 bg-[#F8F6FE] px-6 py-8 transform transition-transform ${
             menuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           <div className="flex justify-between items-center mb-8">
-            <span className="text-lg font-bold text-blue-700">Logo</span>
+            <span className="text-lg font-bold text-[#3322AA]">Logo</span>
             <button
               onClick={() => setMenuOpen(false)}
-              className="text-2xl"
+              className="text-2xl text-[#020A18]"
               aria-label="Close menu"
             >
               ×
@@ -91,7 +98,7 @@ export default function Header() {
                   <Link
                     href={href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-blue-700 text-lg font-medium"
+                    className="text-[#3322AA] text-lg font-medium hover:text-[#3133EE]"
                   >
                     {label}
                   </Link>
